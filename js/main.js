@@ -485,43 +485,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ==========================================
-    // Fonction d'initialisation principale
-    // ==========================================
-    function init() {
-        console.log('🚀 Portfolio Cybersécurité - Initialisation...');
-        
-        // Initialisation des modules
-        initEventListeners();
-        initLoadAnimations();
-        initKeyboardShortcuts();
-        initPerformanceOptimizations();
-        initErrorHandling();
-        initThemeToggle();
-        
-        // Animations
-        setTimeout(() => {
-            initTypewriterEffect();
-            animateTerminalTyping();
-            animateProgressBars();
-            animateProjectCards();
-            animateCounters();
-        }, 500);
-        
-        // Formulaire
-        handleContactForm();
-        
-        // Effets visuels
-        handleParallaxEffect();
-        
-        console.log('✅ Portfolio initialisé avec succès !');
-        
-        // Animation de bienvenue
-        setTimeout(() => {
-            showToast('Portfolio chargé ! Explorez mes compétences en cybersécurité 🔒', 'success');
-        }, 1000);
-    }
-    
-    // ==========================================
     // Démarrage de l'application
     // ==========================================
     init();
