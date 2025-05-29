@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan Devaux - Portfolio Cybersécurité BUT RT</title>
+    <meta name="description" content="Portfolio de Tristan Devaux, étudiant en BUT Réseaux et Télécommunications spécialisé en cybersécurité">
+    <meta name="keywords" content="Tristan Devaux, BUT RT, cybersécurité, réseaux, télécommunications, portfolio">
+    <meta name="author" content="Tristan Devaux">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tristan Devaux - Portfolio Cybersécurité">
+    <meta property="og:description" content="Étudiant BUT RT spécialisé en cybersécurité - 20 ans">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Tristan<span class="accent">Dev</span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Salut, je suis <span class="typing-text">Tristan Devaux</span>
+                    <br>
+                    <span class="accent">Étudiant BUT RT Cybersécurité</span>
+                </h1>
+                <p class="hero-subtitle">
+                    20 ans • 2ème année BUT Réseaux et Télécommunications
+                    <br>
+                    Passionné par la cybersécurité et la protection des systèmes d'information
+                </p>
+                <div class="hero-buttons">
+                    <a href="#skills" class="btn btn-primary">
+                        <i class="fas fa-shield-alt"></i>
+                        Mes Compétences
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-code"></i>
+                        Mes Projets
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/tristan-devaux" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:tristan.devaux@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <span class="terminal-title">tristan@cybersec-lab:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">whoami</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">tristan_devaux</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">cat formation.txt</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">BUT RT - 2ème année</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Spécialisation: Cybersécurité</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">nmap -sS target.local</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output success">Scan completed - 3 services detected</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command typing">python3 security_audit.py</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Je suis <strong>Tristan Devaux</strong>, 20 ans, étudiant en 2ème année de 
+                        <strong>BUT Réseaux et Télécommunications</strong>. Passionné par la cybersécurité 
+                        depuis mes débuts dans l'informatique, je me spécialise dans la protection 
+                        des systèmes d'information et la sécurité réseau.
+                    </p>
+                    <p>
+                        Durant ma formation, j'approfondis mes connaissances en audit de sécurité, 
+                        tests d'intrusion, cryptographie et forensique numérique. Mon objectif est 
+                        de devenir expert en cybersécurité pour contribuer à la protection des 
+                        infrastructures critiques.
+                    </p>
+                    <p>
+                        Curieux et autodidacte, je me tiens constamment informé des dernières 
+                        menaces et techniques de protection, participant régulièrement à des 
+                        CTF (Capture The Flag) et des formations en ligne.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20</div>
+                        <div class="stat-label">Ans</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Années BUT RT</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Outils Cybersec</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Compétences BUT RT</h2>
+            <div class="skills-intro">
+                <p>Voici un aperçu des compétences que je développe durant ma formation BUT RT, avec un focus particulier sur la cybersécurité :</p>
+            </div>
+            <div class="skills-container">
+                
+                <!-- Cybersécurité -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-shield-alt"></i>
+                        Cybersécurité - Ma spécialisation
+                    </h3>
+                    <div class="skills-table">
+                        <div class="skill-row header">
+                            <div class="skill-name">Compétence</div>
+                            <div class="skill-level">Niveau actuel</div>
+                            <div class="skill-tools">Outils maîtrisés</div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Audit de sécurité</strong>
+                                <small>Évaluation des vulnérabilités</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Nmap</span>
+                                <span class="tool">Nessus</span>
+                                <span class="tool">OpenVAS</span>
+                                <span class="tool">Nikto</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Tests d'intrusion</strong>
+                                <small>Pentest et exploitation</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Metasploit</span>
+                                <span class="tool">Burp Suite</span>
+                                <span class="tool">OWASP ZAP</span>
+                                <span class="tool">Kali Linux</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Cryptographie</strong>
+                                <small>Chiffrement et sécurisation</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">OpenSSL</span>
+                                <span class="tool">GPG/PGP</span>
+                                <span class="tool">HashCat</span>
+                                <span class="tool">John the Ripper</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Forensique numérique</strong>
+                                <small>Investigation et analyse</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 55%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Autopsy</span>
+                                <span class="tool">Volatility</span>
+                                <span class="tool">Wireshark</span>
+                                <span class="tool">FTK Imager</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Sécurité Web</strong>
+                                <small>Applications et serveurs</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">SQLMap</span>
+                                <span class="tool">XSSer</span>
+                                <span class="tool">Dirb</span>
+                                <span class="tool">Gobuster</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Réseaux -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-network-wired"></i>
+                        Réseaux & Télécommunications - Formation BUT
+                    </h3>
+                    <div class="skills-table">
+                        <div class="skill-row header">
+                            <div class="skill-name">Compétence</div>
+                            <div class="skill-level">Niveau actuel</div>
+                            <div class="skill-tools">Technologies</div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Administration réseau</strong>
+                                <small>Configuration et gestion</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%"></div>
+                                </div>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Cisco IOS</span>
+                                <span class="tool">pfSense</span>
+                                <span class="tool">Linux</span>
+                                <span class="tool">Windows Server</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Sécurité réseau</strong>
+                                <small>Protection et filtrage</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Firewalls</span>
+                                <span class="tool">VPN (IPSec/OpenVPN)</span>
+                                <span class="tool">IDS/IPS</span>
+                                <span class="tool">ACL</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Monitoring réseau</strong>
+                                <small>Surveillance et métriques</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Nagios</span>
+                                <span class="tool">PRTG</span>
+                                <span class="tool">Zabbix</span>
+                                <span class="tool">SNMP</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Protocoles réseau</strong>
+                                <small>TCP/IP, routage, commutation</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 85%"></div>
+                                </div>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">OSPF</span>
+                                <span class="tool">BGP</span>
+                                <span class="tool">VLAN</span>
+                                <span class="tool">STP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Développement -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Développement & Automatisation
+                    </h3>
+                    <div class="skills-table">
+                        <div class="skill-row header">
+                            <div class="skill-name">Compétence</div>
+                            <div class="skill-level">Niveau actuel</div>
+                            <div class="skill-tools">Langages/Frameworks</div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Scripts d'automatisation</strong>
+                                <small>Tâches répétitives et outils</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Python</span>
+                                <span class="tool">Bash</span>
+                                <span class="tool">PowerShell</span>
+                                <span class="tool">Ansible</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Développement Web</strong>
+                                <small>Frontend et sécurité web</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">HTML5/CSS3</span>
+                                <span class="tool">JavaScript</span>
+                                <span class="tool">PHP</span>
+                                <span class="tool">SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Bases de données</strong>
+                                <small>Gestion et sécurisation</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">MySQL</span>
+                                <span class="tool">PostgreSQL</span>
+                                <span class="tool">MongoDB</span>
+                                <span class="tool">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Systèmes -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Systèmes & Infrastructure
+                    </h3>
+                    <div class="skills-table">
+                        <div class="skill-row header">
+                            <div class="skill-name">Compétence</div>
+                            <div class="skill-level">Niveau actuel</div>
+                            <div class="skill-tools">Systèmes/Outils</div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Administration Linux</strong>
+                                <small>Serveurs et sécurisation</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 80%"></div>
+                                </div>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Ubuntu</span>
+                                <span class="tool">CentOS</span>
+                                <span class="tool">Debian</span>
+                                <span class="tool">Kali Linux</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Virtualisation</strong>
+                                <small>Lab et environnements</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">VMware</span>
+                                <span class="tool">VirtualBox</span>
+                                <span class="tool">Docker</span>
+                                <span class="tool">Proxmox</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Services réseau</strong>
+                                <small>DNS, DHCP, Web, Mail</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">BIND</span>
+                                <span class="tool">Apache/Nginx</span>
+                                <span class="tool">Postfix</span>
+                                <span class="tool">FTP/SFTP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets Cybersécurité</h2>
+            <p class="projects-intro">
+                Découvrez quelques-uns des projets que j'ai réalisés durant ma formation BUT RT, 
+                avec un focus sur la cybersécurité et la sécurisation des systèmes.
+            </p>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Audit de sécurité réseau d'entreprise</h3>
+                        <p>
+                            Évaluation complète de la sécurité du réseau de l'IUT avec identification 
+                            des vulnérabilités, tests d'intrusion et recommandations de sécurisation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Nmap</span>
+                            <span class="tech-tag">Nessus</span>
+                            <span class="tech-tag">Metasploit</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code source
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-pdf"></i>
+                                Rapport d'audit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Honeypot de détection d'intrusions</h3>
+                        <p>
+                            Déploiement d'un honeypot SSH pour détecter et analyser les tentatives 
+                            d'intrusion, avec logging et alertes en temps réel.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cowrie</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ELK Stack</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Repository
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestionnaire de mots de passe sécurisé</h3>
+                        <p>
+                            Application Python de gestion de mots de passe avec chiffrement AES-256, 
+                            authentification à deux facteurs et interface graphique.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Cryptography</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Investigation forensique numérique</h3>
+                        <p>
+                            Analyse forensique complète d'un incident de sécurité simulé : récupération 
+                            de données, timeline d'attaque et rapport d'investigation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Autopsy</span>
+                            <span class="tech-tag">Volatility</span>
+                            <span class="tech-tag">Wireshark</span>
+                            <span class="tech-tag">FTK Imager</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-pdf"></i>
+                                Rapport forensique
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-presentation"></i>
+                                Présentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sécurisation infrastructure WiFi</h3>
+                        <p>
+                            Projet de sécurisation complète d'un réseau WiFi d'entreprise : 
+                            WPA3-Enterprise, RADIUS, segmentation et monitoring.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">pfSense</span>
+                            <span class="tech-tag">FreeRADIUS</span>
+                            <span class="tech-tag">Cisco WLC</span>
+                            <span class="tech-tag">Nagios</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-network-wired"></i>
+                                Architecture
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-cogs"></i>
+                                Configuration
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Scripts d'automatisation sécurité</h3>
+                        <p>
+                            Collection de scripts Python pour l'automatisation des tâches de sécurité : 
+                            scans réseau, monitoring, alertes et rapports automatisés.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Crontab</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Scripts GitHub
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Discutons cybersécurité !</h3>
+                    <p>
+                        Étudiant passionné de cybersécurité, je suis toujours ouvert aux discussions 
+                        sur les nouvelles technologies, les menaces émergentes ou les opportunités 
+                        de stage et d'alternance.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:tristan.devaux@example.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>tristan.devaux@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/tristan-devaux" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn - Tristan Devaux</span>
+                        </a>
+                        <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub - Projets & Code</span>
+                        </a>
+                        <div class="contact-method">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BUT RT - 2ème année • 20 ans</span>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>France • Disponible en mobilité</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Sujet du message">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Votre message *" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer le message
+                    </button>
+                    <p class="form-note">
+                        <i class="fas fa-info-circle"></i>
+                        Je réponds généralement sous 24h !
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <p>
+                        <strong>Tristan Devaux</strong> • Portfolio Cybersécurité • BUT RT 2ème année
+                    </p>
+                    <p>
+                        Développé avec passion pour la sécurité informatique • 
+                        <span id="current-year">2025</span>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À propos</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/tristan-devaux" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:tristan.devaux@example.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
