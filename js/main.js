@@ -513,3 +513,190 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// Script iMessage Widget
+document.addEventListener('DOMContentLoaded', function() {
+    const widget = document.getElementById('imessageWidget');
+    const bubble = document.getElementById('imessageBubble');
+    const window = document.getElementById('imessageWindow');
+    const closeBtn = document.getElementById('imessageClose');
+    const messagesContainer = document.getElementById('imessageMessages');
+    
+    let isOpen = false;
+    let messageSequence = 0;
+    
+    // Messages prédéfinis
+    const messages = [
+        {
+            type: 'received',
+            text: '👋 Salut !',
+            delay: 1000
+        },
+        {
+            type: 'received',
+            text: 'Je suis Tristan, étudiant en cybersécurité BUT RT à l\'IUT de Roanne',
+            delay: 2000
+        },
+        {
+            type: 'received',
+            text: 'Comment puis-je t\'aider ? 😊',
+            delay: 1500
+        }
+    ];
+    
+    // Ouvrir le chat
+    bubble.addEventListener('click', function() {
+        if (!isOpen) {
+            openChat();
+        }
+    });
+    
+    // Fermer le chat
+    closeBtn.addEventListener('click', function() {
+        closeChat();
+    });
+    
+    function openChat() {
+        isOpen = true;
+        bubble.style.animation = 'none';
+        window.classList.add('active');
+        
+        // Démarrer la séquence de messages
+        setTimeout(() => {
+            startMessageSequence();
+        }, 500);
+    }
+    
+    function closeChat() {
+        isOpen = false;
+        window.classList.remove('active');
+        messagesContainer.innerHTML = '';
+        messageSequence = 0;
+        
+        // Reprendre l'animation de la bulle
+        setTimeout(() => {
+            bubble.style.animation = 'imessageBounce 2s ease-in-out infinite';
+        }, 500);
+    }
+    
+    function startMessageSequence() {
+        if (messageSequence >= messages.length) {
+            showContactActions();
+            return;
+        }
+        
+        const message = messages[messageSequence];
+        
+        // Afficher l'indicateur de frappe
+        showTypingIndicator();
+        
+        setTimeout(() => {
+            hideTypingIndicator();
+            addMessage(message.text, message.type);
+            messageSequence++;
+            
+            // Message suivant
+            setTimeout(() => {
+                startMessageSequence();
+            }, 800);
+            
+        }, message.delay);
+    }
+    
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'imessage-message received';
+        typingDiv.id = 'typingIndicator';
+        typingDiv.innerHTML = `
+            <div class="typing-indicator">
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        `;
+        
+        messagesContainer.appendChild(typingDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    function hideTypingIndicator() {
+        const typingIndicator = document.getElementById('typingIndicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+    }
+    
+    function addMessage(text, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `imessage-message ${type}`;
+        
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('fr-FR', { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+        });
+        
+        messageDiv.innerHTML = `
+            <div class="message-bubble ${type}">
+                ${text}
+            </div>
+            <div class="message-time">${timeString}</div>
+        `;
+        
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    function showContactActions() {
+        const actionsDiv = document.createElement('div');
+        actionsDiv.className = 'imessage-message received';
+        actionsDiv.innerHTML = `
+            <div class="contact-actions">
+                <a href="mailto:tristan-devaux@etu.univ-st-etienne.fr" class="contact-action">
+                    <i class="fas fa-envelope"></i>
+                    <span>M'envoyer un email</span>
+                </a>
+                <a href="https://linkedin.com/in/tristan-devaux" target="_blank" class="contact-action">
+                    <i class="fab fa-linkedin"></i>
+                    <span>Me contacter sur LinkedIn</span>
+                </a>
+                <button class="contact-action" onclick="goToContactForm()">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Formulaire de contact</span>
+                </button>
+            </div>
+        `;
+        
+        messagesContainer.appendChild(actionsDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    // Fermer si on clique à l'extérieur
+    document.addEventListener('click', function(e) {
+        if (isOpen && !widget.contains(e.target)) {
+            closeChat();
+        }
+    });
+    
+    // Auto-animation de la bulle après quelques secondes
+    setTimeout(() => {
+        if (!isOpen) {
+            bubble.style.animation = 'imessageBounce 1s ease-in-out 3';
+            setTimeout(() => {
+                bubble.style.animation = 'imessageBounce 2s ease-in-out infinite';
+            }, 3000);
+        }
+    }, 3000);
+});
+
+// Fonction pour aller au formulaire de contact
+function goToContactForm() {
+    document.getElementById('imessageClose').click();
+    setTimeout(() => {
+        document.getElementById('contact').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }, 300);
+}
