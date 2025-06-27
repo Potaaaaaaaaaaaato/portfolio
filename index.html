@@ -29,27 +29,36 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Tristan - Portfolio</span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Accueil</a></li>
-                <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="#experience" class="nav-link">Expérience</a></li>
-                <li><a href="#skills" class="nav-link">Compétences</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Navigation avec le switch corrigé -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="logo-text">Tristan - Portfolio</span>
         </div>
-    </nav>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link">Accueil</a></li>
+            <li><a href="#about" class="nav-link">À propos</a></li>
+            <li><a href="#experience" class="nav-link">Expérience</a></li>
+            <li><a href="#skills" class="nav-link">Compétences</a></li>
+            <li><a href="#projects" class="nav-link">Projets</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <!-- Theme Switcher - IMPORTANT: Vérifiez que cet ID existe -->
+        <div class="theme-switcher">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">
+                <i class="fas fa-sun" id="sun-icon"></i>
+                <i class="fas fa-moon" id="moon-icon"></i>
+            </button>
+        </div>
+        
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -80,10 +89,6 @@
                     <a href="https://linkedin.com/in/tristan-devaux" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <!--
-                    <a href="https://signal.me/#eu/ZAIW1RrvxaTK-iI_LCuDPtNAxX7441J_QamD4cZj7kZgnQW54pNMQbBE23woJZQz" class="social-link" title="Signal">
-                        <i class="fas fa-comment-dots"></i>
-                    </a> -->
                     <a href="mailto:tristan@tristan-devaux.fr" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
@@ -162,15 +167,15 @@
                     <p>
                         Passionné par les nouvelles technologies, je suis un fervent défenseur de l'utilisation des 
                         <strong>intelligences artificielles</strong> dans tous les aspects de la vie quotidienne. 
-                        Je me réjouis des avancées fulgurantes des IA génératives (qu’il s’agisse de texte, de code, 
-                        d’image ou même de vidéo avec des outils comme <strong>Google Veo 3</strong> ou <strong>Sora d’OpenAI</strong>). 
-                        Pour moi, l’IA est un allié du quotidien : elle m’aide à traiter mes mails, à répondre automatiquement 
-                        aux plus basiques d’entre eux, et à booster ma productivité sur mes projets personnels et étudiants. 
-                        J’encourage son adoption par tous, pour tout !
+                        Je me réjouis des avancées fulgurantes des IA génératives (qu'il s'agisse de texte, de code, 
+                        d'image ou même de vidéo avec des outils comme <strong>Google Veo 3</strong> ou <strong>Sora d'OpenAI</strong>). 
+                        Pour moi, l'IA est un allié du quotidien : elle m'aide à traiter mes mails, à répondre automatiquement 
+                        aux plus basiques d'entre eux, et à booster ma productivité sur mes projets personnels et étudiants. 
+                        J'encourage son adoption par tous, pour tout !
                     </p>
                     <p>
                         Mes IA préférées ? Naturellement ChatGPT o1 pour sa réfléxion juste incroyable ! 👀
-                        Viennent ensuite Claude Sonnet 4 pour la génération de codes complexes et Grok 3 pour la génération de longs textes (avec X Premium c'est tout de suite plus pratique). 
+                        Viennent ensuite Claude Sonnet 4 pour la génération de codes complexes et Grok 3 pour la génération de longs textes (avec X Premium c'est tout de suite plus pratique).[...]
                     </p>
                 </div>
                 <div class="about-stats">
@@ -216,7 +221,7 @@
                             Saint-Étienne, France
                         </span>
                         <p>
-                            Conception et développement du nouveau site web de l’Association Pour l’Enfant et Sa Famille, basée à Saint-Étienne. L’objectif ? Offrir à l’association une vitrine en ligne moderne, fonctionnelle et à la hauteur de ses missions.
+                            Conception et développement du nouveau site web de l'Association Pour l'Enfant et Sa Famille, basée à Saint-Étienne. L'objectif ? Offrir à l'association un site moderne et fonctionnel.
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">Développement Web</span>
@@ -243,13 +248,13 @@
                             Remote
                         </span>
                         <p>
-                            Conception et développement d’une application éducative innovante en SwiftUI, centrée sur la politique française et pensée spécifiquement pour un public adolescent et étudiant. L’objectif principal est de rendre les institutions de la République plus accessibles, compréhensibles et engageantes, en s’appuyant sur une approche pédagogique interactive et moderne.
+                            Conception et développement d'une application éducative innovante en SwiftUI, centrée sur la politique française et pensée spécifiquement pour un public adolescent.
                         </p>
                         <p>
-                            L’application propose des quiz dynamiques pour tester ses connaissances, des fiches explicatives claires sur le fonctionnement des différentes institutions françaises (Présidence, Parlement, collectivités territoriales, etc.), ainsi qu’une base de données régulièrement mise à jour pour suivre l’évolution du paysage politique.
+                            L'application propose des quiz dynamiques pour tester ses connaissances, des fiches explicatives claires sur le fonctionnement des différentes institutions françaises.
                         </p>
                         <p>
-                            L’interface a été pensée pour offrir une expérience utilisateur fluide, ludique et intuitive. Une extension de l’application sur Android est actuellement en cours de planification, afin d’élargir son accessibilité et son impact. En parallèle, je développe une version Android de l’application en Flutter, pour toucher un public encore plus large.
+                            L'interface a été pensée pour offrir une expérience utilisateur fluide, ludique et intuitive. Une extension de l'application sur Android est actuellement en cours.
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">SwiftUI</span>
@@ -277,10 +282,10 @@
                             Roanne, France
                         </span>
                         <p>
-                            Formation en Réseaux et Télécommunications, avec une spécialisation approfondie en cybersécurité. Ce cursus m’a permis d’acquérir des compétences solides dans des domaines clés tels que la sécurité des systèmes d’information, la détection et la prévention des intrusions, le chiffrement des données, et la gestion des risques numériques.
+                            Formation en Réseaux et Télécommunications, avec une spécialisation approfondie en cybersécurité. Ce cursus m'a permis d'acquérir des compétences solides dans l'administration réseau, la sécurité informatique et les télécommunications.
                         </p>
                         <p>
-                            J’ai également été formé à l’administration et la supervision de réseaux complexes, au déploiement d’architectures sécurisées, ainsi qu’au développement d’outils et de scripts pour renforcer la sécurité des infrastructures. Cette formation allie théorie, pratique et veille technologique constante pour faire face aux menaces actuelles et anticiper celles de demain.
+                            J'ai également été formé à l'administration et la supervision de réseaux complexes, au déploiement d'architectures sécurisées, ainsi qu'au développement d'applications.
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">Cybersécurité</span>
@@ -699,7 +704,7 @@
                             Extension Android prévue.
                         </p>
                         <p>
-                            Je ne dirai pas qu'il faut forcer les adolescents à s'intéresser à la politique mais... bon d'accord, je le dis : forcez vos adolescents à s'intéresser à la politique !!
+                            Je ne dirai pas qu'il faut forcer les adolescents à s'intéresser à la politique mais... bon d'accord, je le dis : forcez vos adolescents à s'intéresser à la politique !
                             EducMe le fait très bien 👀
                         </p>
                         <div class="project-tech">
@@ -785,97 +790,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- ARCHIVAGE PROJETS NE PAS SUPPRIMER
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Honeypot de détection d'intrusions</h3>
-                        <p>
-                            Déploiement d'un honeypot SSH pour détecter et analyser les tentatives 
-                            d'intrusion, avec logging et alertes en temps réel.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Cowrie</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">ELK Stack</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Repository
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-key"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Gestionnaire de mots de passe sécurisé</h3>
-                        <p>
-                            Application Python de gestion de mots de passe avec chiffrement AES-256, 
-                            authentification à deux facteurs et interface graphique.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Cryptography</span>
-                            <span class="tech-tag">Tkinter</span>
-                            <span class="tech-tag">SQLite</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Source code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-download"></i>
-                                Download
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Scripts d'automatisation sécurité</h3>
-                        <p>
-                            Collection de scripts Python pour l'automatisation des tâches de sécurité : 
-                            scans réseau, monitoring, alertes et rapports automatisés.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Bash</span>
-                            <span class="tech-tag">Crontab</span>
-                            <span class="tech-tag">APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Scripts GitHub
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-book"></i>
-                                Documentation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            -->
         </div>
     </section>
 
@@ -886,9 +801,9 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-methods">
-                        <a href="mailto:tristan.devaux@etu.univ-st-etienne.fr" class="contact-method">
+                        <a href="mailto:tristan@tristan-devaux.fr" class="contact-method">
                             <i class="fas fa-envelope"></i>
-                            <span>tristan.devaux@etu.univ-st-etienne.fr</span>
+                            <span>tristan@tristan-devaux.fr</span>
                         </a>
                         <a href="https://linkedin.com/in/tristan-devaux" target="_blank" class="contact-method">
                             <i class="fab fa-linkedin"></i>
@@ -908,82 +823,27 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" action="https://forms.brevo.com/f/[VOTRE_FORM_ID]" method="POST">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Votre nom *" required>
+                        <input type="text" name="nom" placeholder="Votre nom *" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Votre email *" required>
+                        <input type="email" name="email" placeholder="Votre email *" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Sujet du message">
+                        <input type="text" name="sujet" placeholder="Sujet du message">
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Votre message *" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Votre message *" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-paper-plane"></i>
                         Envoyer le message
                     </button>
-                    <p class="form-note">
-                        <i class="fas fa-info-circle"></i>
-                        Je réponds généralement sous 24h (mais ça dépend de qui envoie le message 👀) !
-                    </p>
                 </form>
             </div>
         </div>
     </section>
-
-<!-- Widget iMessage - à ajouter avant </body> -->
-<div class="imessage-widget" id="imessageWidget">
-    <!-- Bulle flottante -->
-    <div class="imessage-bubble" id="imessageBubble">
-        <div class="bubble-icon">
-            <i class="fas fa-comment"></i>
-        </div>
-        <span class="bubble-text">Hey ! On discute ?</span>
-    </div>
-    
-        <!-- Fenêtre iMessage -->
-        <div class="imessage-window" id="imessageWindow">
-            <!-- Header iMessage -->
-            <div class="imessage-header">
-                <button class="header-btn" id="imessageClose">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div class="contact-info">
-                    <div class="contact-avatar">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMwMDdBRkYiLz4KPHR4dCB4PSI1MCUiIHk9IjUwJSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiPlQ8L3RleHQ+Cjwvc3ZnPgo=" alt="Tristan">
-                    </div>
-                    <div class="contact-details">
-                        <h3>Tristan Devaux</h3>
-                        <p>iMessage</p>
-                    </div>
-                </div>
-                <button class="header-btn">
-                    <i class="fas fa-info-circle"></i>
-                </button>
-            </div>
-            
-            <!-- Messages iMessage -->
-            <div class="imessage-messages" id="imessageMessages">
-                <!-- Les messages apparaîtront ici dynamiquement -->
-            </div>
-            
-            <!-- Barre de saisie iMessage -->
-            <div class="imessage-input">
-                <button class="input-btn">
-                    <i class="fas fa-camera"></i>
-                </button>
-                <div class="input-field">
-                    <input type="text" placeholder="iMessage" readonly>
-                </div>
-                <button class="input-btn">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -994,40 +854,15 @@
                         <strong>Tristan Devaux</strong> • Tous droits réservés
                     </p>
                     <p>
-                        Et non, ce site n'a pas été conçu avec une template.
-                    </p>
-                    <p>
                         Développé et hébergé (chez OVH, cocorico !!) avec ❤️ en 🇫🇷 • 
-                        <span id="current-year">2025</span>
+                        Dernière mise à jour : Juin 2025
                     </p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Accueil</a>
-                    <a href="#about">À propos</a>
-                    <a href="#experience">Expérience</a>
-                    <a href="#skills">Compétences</a>
-                    <a href="#projects">Projets</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/tristan-devaux" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://signal.me/#eu/ZAIW1RrvxaTK-iI_LCuDPtNAxX7441J_QamD4cZj7kZgnQW54pNMQbBE23woJZQz" class="social-link" title="Signal">
-                        <i class="fas fa-comment-dots"></i>
-                    </a>
-                    <a href="mailto:tristan@tristan-devaux.fr" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
