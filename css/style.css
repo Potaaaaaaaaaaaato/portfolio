@@ -166,6 +166,21 @@ body {
     color: white;
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-weight: 500;
+}
+
+.btn-outline:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
 /* ==========================================
    Navigation avec Theme Switcher
 ========================================== */
@@ -329,6 +344,7 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    padding-top: 100px; /* Espace fixe avec la navbar */
 }
 
 .hero::before {
@@ -1057,6 +1073,49 @@ body {
     border: 1px solid var(--border-color);
 }
 
+/* Messages de feedback du formulaire */
+.form-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+.form-message.show {
+    display: flex;
+}
+
+.form-message.success {
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    color: #2ecc71;
+}
+
+.form-message.error {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+}
+
+.form-message i {
+    font-size: 1.2rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .form-group {
     margin-bottom: var(--spacing-md);
 }
@@ -1543,5 +1602,224 @@ body {
     .image-carousel {
         max-width: 100%;
         margin: 0;
+    }
+}
+
+/* ==========================================
+   GitHub Activity Styles
+========================================== */
+.github-activity-container {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--bg-primary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.github-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.github-title i {
+    color: var(--primary-color);
+}
+
+.github-loading {
+    text-align: center;
+    padding: var(--spacing-md);
+    color: var(--text-muted);
+}
+
+.github-events {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.github-event {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    transition: var(--transition-fast);
+}
+
+.github-event:hover {
+    background: var(--bg-tertiary);
+    transform: translateX(5px);
+}
+
+.github-event-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.github-event-content {
+    flex: 1;
+}
+
+.github-event-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.github-event-time {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.github-link:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   App Screenshots Carousel
+========================================== */
+.app-carousel {
+    position: relative;
+    margin: var(--spacing-lg) 0;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+}
+
+.app-carousel-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.app-screenshot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: var(--bg-primary);
+}
+
+.app-screenshot.active {
+    opacity: 1;
+}
+
+.app-carousel-prev,
+.app-carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    z-index: 10;
+}
+
+.app-carousel-prev:hover,
+.app-carousel-next:hover {
+    background: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.app-carousel-prev {
+    left: 10px;
+}
+
+.app-carousel-next {
+    right: 10px;
+}
+
+.app-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--spacing-sm);
+}
+
+.app-carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.app-carousel-dot.active {
+    background: var(--primary-color);
+    width: 24px;
+    border-radius: 5px;
+}
+
+.app-carousel-dot:hover {
+    background: var(--primary-color);
+    opacity: 0.7;
+}
+
+/* Responsive pour GitHub et App Carousel */
+@media (max-width: 768px) {
+    .github-activity-container {
+        padding: var(--spacing-sm);
+    }
+    
+    .github-event {
+        flex-direction: column;
+    }
+    
+    .app-carousel {
+        padding: var(--spacing-sm);
+    }
+    
+    .app-carousel-container {
+        aspect-ratio: 9/16;
+    }
+    
+    .app-carousel-prev,
+    .app-carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
     }
 }

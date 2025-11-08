@@ -120,7 +120,7 @@
     }
     
     .hero {
-        padding-top: 80px;
+        padding-top: 80px; /* Réduit légèrement sur mobile */
     }
     
     .hero-buttons {

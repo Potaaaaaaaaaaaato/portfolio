@@ -81,6 +81,10 @@
                         <i class="fas fa-code"></i>
                         Mes projets
                     </a>
+                    <a href="assets/cv/CV_Tristan_Devaux.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        Télécharger mon CV
+                    </a>
                 </div>
                 <div class="hero-social">
                     <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" class="social-link">
@@ -94,7 +98,7 @@
                     </a>
                 </div>
             </div>
-            <div class="hero-visual">
+            <!--<div class="hero-visual">
                 <div class="terminal-window">
                     <div class="terminal-header">
                         <div class="terminal-buttons">
@@ -117,7 +121,7 @@
                             <span class="command">cat formation.txt</span>
                         </div>
                         <div class="terminal-line">
-                            <span class="output">BUT RT - 2ème année (depuis sept. 2023)</span>
+                            <span class="output">BUT RT - 3ème année (depuis sept. 2022)</span>
                         </div>
                         <div class="terminal-line">
                             <span class="output">Spécialisation: Cybersécurité</span>
@@ -134,11 +138,11 @@
                         </div>
                         <div class="terminal-line">
                             <span class="prompt">$</span>
-                            <span class="command typing">swift build PolitiqueApp.swift</span>
+                            <span class="command typing">swift build EducMe.swift</span>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -149,34 +153,43 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Je suis <strong>Tristan Devaux</strong>, 21 ans, étudiant en 2ème année de 
-                        <strong>BUT Réseaux et Télécommunications</strong> à l'<strong>IUT de Roanne</strong> depuis septembre 2023. 
-                        Basé à <strong>Roanne</strong>, je suis passionné par la cybersécurité et le développement d'applications.
+                        Je suis <strong>Tristan Devaux</strong>, 21 ans, étudiant en 3ème année de 
+                        <strong>BUT Réseaux et Télécommunications</strong> à l'<strong>IUT de Roanne</strong> depuis septembre 2022. 
+                        Basé à <strong>Roanne</strong>, je me spécialise en <strong>cybersécurité</strong> tout en développant 
+                        une expertise complémentaire en <strong>développement d'applications</strong>.
                     </p>
                     <p>
-                        Durant ma formation, j'approfondis mes connaissances en audit de sécurité, 
-                        tests d'intrusion, cryptographie et forensic numérique. Parallèlement, je développe 
-                        mes compétences en <strong>développement d'applications et de sites web</strong>, 
-                        mes principales passions en dehors de la cybersécurité.
+                        Ma formation me permet d'approfondir mes compétences en <strong>audit de sécurité</strong>, 
+                        <strong>tests d'intrusion</strong>, <strong>cryptographie</strong> et <strong>forensic numérique</strong>. 
+                        J'acquiers également une solide maîtrise de l'administration réseau (Cisco, Stormshield), 
+                        des systèmes Linux/Windows et des protocoles de sécurisation des infrastructures.
                     </p>
                     <p>
-                        Curieux et autodidacte, je me tiens constamment informé des dernières 
-                        menaces et techniques de protection, tout en travaillant sur des projets personnels 
-                        innovants comme une application éducative sur la politique française en SwiftUI.
+                        Parallèlement à ma spécialisation en cybersécurité, je développe activement mes compétences en 
+                        <strong>développement d'applications mobiles et web</strong>. Cette double expertise me permet 
+                        d'aborder la sécurité informatique avec une vision complète du cycle de développement, 
+                        de la conception à la mise en production sécurisée.
                     </p>
                     <p>
-                        Passionné par les nouvelles technologies, je suis un fervent défenseur de l'utilisation des 
-                        <strong>intelligences artificielles</strong> dans tous les aspects de la vie quotidienne. 
-                        Je me réjouis des avancées fulgurantes des IA génératives (qu'il s'agisse de texte, de code, 
-                        d'image ou même de vidéo avec des outils comme <strong>Google Veo 3</strong> ou <strong>Sora d'OpenAI</strong>). 
-                        Pour moi, l'IA est un allié du quotidien : elle m'aide à traiter mes mails, à répondre automatiquement 
-                        aux plus basiques d'entre eux, et à booster ma productivité sur mes projets personnels et étudiants. 
-                        J'encourage son adoption par tous, pour tout, partout !
+                        Autodidacte et rigoureux, je reste en veille constante sur les évolutions technologiques 
+                        et les nouvelles menaces cyber. Mes projets personnels, comme le développement d'une application 
+                        éducative en SwiftUI ou la refonte de sites web avec Django, reflètent ma capacité à mener 
+                        des projets techniques complexes de manière autonome et professionnelle.
                     </p>
-                    <p>
-                        Mes IA préférées ? Naturellement ChatGPT o1 pour sa réfléxion juste incroyable ! 👀
-                        Viennent ensuite Claude Sonnet 4 pour la génération de codes complexes et Grok 3 pour la génération de longs textes (avec X Premium c'est tout de suite plus pratique).
-                    </p>
+                    
+                    <!-- Activité GitHub -->
+                    <div class="github-activity-container">
+                        <h3 class="github-title">
+                            <i class="fab fa-github"></i>
+                            Activité GitHub récente
+                        </h3>
+                        <div id="github-activity">
+                            <div class="github-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                                Chargement de l'activité...
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -184,16 +197,16 @@
                         <div class="stat-label">Ans</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
+                        <div class="stat-number">3</div>
                         <div class="stat-label">Années BUT RT</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Projets réalisés</div>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Technologies maîtrisées</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Langages mobiles</div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Plateformes mobiles</div>
                     </div>
                 </div>
             </div>
@@ -221,12 +234,33 @@
                             Saint-Étienne, France
                         </span>
                         <p>
-                            Conception et développement du nouveau site web de l'Association Pour l'Enfant et Sa Famille, basée à Saint-Étienne. L'objectif ? Offrir à l'association un site moderne et fonctionnel.
+                            Mission de refonte complète du site web de l'Association Pour l'Enfant et Sa Famille. 
+                            Durant plus de 2 mois, j'ai conçu et développé une solution web moderne et évolutive pour 
+                            répondre aux besoins de l'association.
+                        </p>
+                        <p>
+                            <strong>Architecture technique :</strong> Mise en place d'une stack Django pour le backend, 
+                            intégré à une base de données PostgreSQL garantissant performance et fiabilité. 
+                            Le frontend combine HTML5, CSS3 et JavaScript avec l'utilisation de frameworks modernes 
+                            pour une expérience utilisateur optimale.
+                        </p>
+                        <p>
+                            <strong>Système d'authentification :</strong> Développement d'un système complet de gestion 
+                            des comptes pour les employés de l'association, leur permettant de modifier le contenu du site 
+                            en toute autonomie via une interface d'administration intuitive et user-friendly.
+                        </p>
+                        <p>
+                            <strong>Hébergement :</strong> Déploiement et configuration sur un VPS OVH 🐓, assurant 
+                            une infrastructure 100% française pour la souveraineté des données de l'association.
                         </p>
                         <div class="timeline-skills">
-                            <span class="skill-tag">Développement Web</span>
-                            <span class="skill-tag">HTML/CSS/JS</span>
-                            <span class="skill-tag">Gestion de base de données</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">HTML5/CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">VPS OVH</span>
+                            <span class="skill-tag">Authentification</span>
+                            <span class="skill-tag">Backend/Frontend</span>
                             <span class="skill-tag">UX/UI Design</span>
                         </div>
                     </div>
@@ -237,8 +271,8 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>Projets freelance</h3>
-                        <h4>Développement d'applications iOS</h4>
+                        <h3>Développement d'une application pour iPhone</h3>
+                        <h4>Projet personnel</h4>
                         <span class="timeline-date">
                             <i class="fas fa-calendar-alt"></i>
                             2024 - En cours
@@ -248,20 +282,65 @@
                             Remote
                         </span>
                         <p>
-                            Conception et développement d'une application éducative innovante en SwiftUI, centrée sur la politique française et pensée spécifiquement pour un public adolescent.
+                            Conception et développement autonome d'<strong>EducMe</strong>, une application éducative innovante 
+                            en SwiftUI destinée aux adolescents pour découvrir la politique et les institutions françaises de 
+                            manière ludique et interactive.
                         </p>
                         <p>
-                            L'application propose des quiz dynamiques pour tester ses connaissances, des fiches explicatives claires sur le fonctionnement des différentes institutions françaises.
+                            <strong>Architecture technique :</strong> Application développée selon le pattern <strong>MVVM</strong> 
+                            (Model-View-ViewModel) garantissant une séparation claire des responsabilités et une maintenance facilitée. 
+                            L'interface utilisateur en SwiftUI offre une expérience fluide et moderne, avec des quiz dynamiques, 
+                            des fiches explicatives détaillées et un système de progression personnalisé.
                         </p>
                         <p>
-                            L'interface a été pensée pour offrir une expérience utilisateur fluide, ludique et intuitive. Une extension de l'application sur Android est actuellement en cours.
+                            <strong>Backend et données :</strong> Migration en cours de Firebase vers <strong>Supabase hébergé 
+                            sur mon propre VPS</strong> pour une maîtrise totale de l'infrastructure et une réduction des coûts. 
+                            Les données (quiz, fiches pédagogiques) sont stockées au format JSON et téléchargées lors de la 
+                            première utilisation, puis mises en cache localement sur l'iPhone. Les mises à jour de contenu 
+                            sont poussées automatiquement vers les utilisateurs sans action de leur part.
                         </p>
+                        <p>
+                            <strong>Fonctionnalités avancées :</strong> Système de notifications intelligentes et discrètes 
+                            pour encourager l'apprentissage continu. Authentification multi-méthodes (compte local, Google, 
+                            Apple, X) avec synchronisation cloud ou stockage 100% local selon le choix de l'utilisateur. 
+                            Suivi de progression et sauvegarde des performances pour une expérience personnalisée.
+                        </p>
+                        <p>
+                            <strong>Extension multiplateforme :</strong> Développement de la version Android en cours avec 
+                            <strong>Kotlin</strong>, en exploitant le partage de code Swift/Kotlin pour le backend grâce 
+                            aux dernières évolutions de l'écosystème mobile. Cette approche permet de mutualiser la logique 
+                            métier tout en optimisant le développement.
+                        </p>
+                        
+                        <!-- Carousel de screenshots -->
+                        <div class="app-carousel">
+                            <div class="app-carousel-container">
+                                <img src="assets/screenshots/educme-home.png" alt="EducMe - Écran d'accueil" class="app-screenshot active">
+                                <img src="assets/screenshots/educme-quiz.png" alt="EducMe - Quiz interactif" class="app-screenshot">
+                                <img src="assets/screenshots/educme-profile.png" alt="EducMe - Profil utilisateur" class="app-screenshot">
+                                <img src="assets/screenshots/educme-fiches.png" alt="EducMe - Fiches pédagogiques" class="app-screenshot">
+                            </div>
+                            <button class="app-carousel-prev" aria-label="Screenshot précédent">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="app-carousel-next" aria-label="Screenshot suivant">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="app-carousel-dots"></div>
+                        </div>
+                        
                         <div class="timeline-skills">
                             <span class="skill-tag">SwiftUI</span>
-                            <span class="skill-tag">iOS</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Supabase</span>
+                            <span class="skill-tag">VPS</span>
                             <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Swift/Kotlin Sharing</span>
+                            <span class="skill-tag">Push Notifications</span>
+                            <span class="skill-tag">OAuth (Google/Apple/X)</span>
+                            <span class="skill-tag">Stockage local</span>
                             <span class="skill-tag">UX/UI Design</span>
-                            <span class="skill-tag">Pédagogie</span>
                         </div>
                     </div>
                 </div>
@@ -275,23 +354,51 @@
                         <h4>IUT de Roanne - Université Jean Monnet</h4>
                         <span class="timeline-date">
                             <i class="fas fa-calendar-alt"></i>
-                            Septembre 2023 - En cours
+                            Septembre 2022 - En cours
                         </span>
                         <span class="timeline-location">
                             <i class="fas fa-map-marker-alt"></i>
                             Roanne, France
                         </span>
                         <p>
-                            Formation en Réseaux et Télécommunications, avec une spécialisation approfondie en cybersécurité. Ce cursus m'a permis d'acquérir des compétences solides dans l'administration réseau, la sécurité informatique et les télécommunications.
+                            Formation universitaire en <strong>Bachelor Universitaire de Technologie (BUT) Réseaux et 
+                            Télécommunications</strong>, avec une spécialisation approfondie en cybersécurité dès la 
+                            deuxième année. Ce cursus en 3 ans combine enseignements théoriques et pratiques intensives 
+                            pour former aux métiers des réseaux, de la sécurité informatique et des télécommunications.
                         </p>
                         <p>
-                            J'ai également été formé à l'administration et la supervision de réseaux complexes, au déploiement d'architectures sécurisées, ainsi qu'au développement d'applications.
+                            <strong>Compétences réseaux :</strong> Administration et configuration d'équipements Cisco 
+                            (routeurs, switchs), déploiement de VLANs, mise en place de protocoles de routage (OSPF, 
+                            Frame-relay), configuration de pare-feux Stormshield, et supervision réseau avec Zabbix et 
+                            Grafana. Maîtrise des outils de simulation et virtualisation (GNS3, Packet Tracer, VMware, 
+                            Proxmox).
+                        </p>
+                        <p>
+                            <strong>Spécialisation cybersécurité :</strong> Formation pratique aux tests d'intrusion 
+                            (Metasploit, Burp Suite, OWASP ZAP), audit de sécurité avec Nmap, Nikto et Wireshark, 
+                            cryptographie et forensique numérique. Réalisation de laboratoires de pentest en environnement 
+                            contrôlé (Kali Linux) et analyse de vulnérabilités web (SQLMap, XSSer).
+                        </p>
+                        <p>
+                            <strong>Administration systèmes :</strong> Déploiement et sécurisation de serveurs Linux 
+                            (Ubuntu, Debian, CentOS), administration Windows Server 2016/2022, gestion de services réseau 
+                            (DNS BIND, DHCP, Nginx, Postfix), et mise en place de solutions de virtualisation et 
+                            conteneurisation (Docker).
+                        </p>
+                        <p>
+                            <strong>Développement applicatif :</strong> Formation complémentaire au développement web 
+                            (HTML/CSS/JS, PHP, PostgreSQL), scripting d'automatisation (Python, Bash, PowerShell), 
+                            et gestion de bases de données (MySQL, PostgreSQL, MariaDB).
                         </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">Cybersécurité</span>
-                            <span class="skill-tag">Réseaux</span>
-                            <span class="skill-tag">Administration système</span>
-                            <span class="skill-tag">Développement</span>
+                            <span class="skill-tag">Réseaux Cisco</span>
+                            <span class="skill-tag">Pentest</span>
+                            <span class="skill-tag">Administration Linux/Windows</span>
+                            <span class="skill-tag">Stormshield</span>
+                            <span class="skill-tag">Virtualisation</span>
+                            <span class="skill-tag">Python/Bash</span>
+                            <span class="skill-tag">Développement Web</span>
                         </div>
                     </div>
                 </div>
@@ -323,21 +430,20 @@
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
-                                <strong>Audit de sécurité (pentest)</strong>
+                                <strong>Audit de sécurité</strong>
                                 <small>Évaluation des vulnérabilités</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 75%"></div>
+                                    <div class="progress" style="width: 72%"></div>
                                 </div>
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">Nmap</span>
-                                <span class="tool">Hashcat</span>
-                                <span class="tool">John The Ripper</span>
                                 <span class="tool">Nikto</span>
                                 <span class="tool">Wireshark</span>
+                                <span class="tool">Nessus</span>
                             </div>
                         </div>
                         <div class="skill-row">
@@ -347,7 +453,7 @@
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 60%"></div>
+                                    <div class="progress" style="width: 58%"></div>
                                 </div>
                                 <span>Débutant+</span>
                             </div>
@@ -361,18 +467,18 @@
                         <div class="skill-row">
                             <div class="skill-name">
                                 <strong>Cryptographie</strong>
-                                <small>Chiffrement et sécurisation</small>
+                                <small>Chiffrement et cassage</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 70%"></div>
+                                    <div class="progress" style="width: 68%"></div>
                                 </div>
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">OpenSSL</span>
                                 <span class="tool">GPG/PGP</span>
-                                <span class="tool">HashCat</span>
+                                <span class="tool">Hashcat</span>
                                 <span class="tool">John the Ripper</span>
                             </div>
                         </div>
@@ -383,27 +489,27 @@
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 55%"></div>
+                                    <div class="progress" style="width: 52%"></div>
                                 </div>
                                 <span>Débutant+</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">Autopsy</span>
                                 <span class="tool">Volatility</span>
-                                <span class="tool">Wireshark</span>
                                 <span class="tool">FTK Imager</span>
+                                <span class="tool">Sleuth Kit</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
                                 <strong>Sécurité Web</strong>
-                                <small>Applications et serveurs</small>
+                                <small>Vulnérabilités applicatives</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 65%"></div>
+                                    <div class="progress" style="width: 64%"></div>
                                 </div>
-                                <span>Débutant+</span>
+                                <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">SQLMap</span>
@@ -415,11 +521,11 @@
                     </div>
                 </div>
 
-                <!-- Développement -->
+                <!-- Développement Mobile -->
                 <div class="skill-category">
                     <h3 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Développement & applications
+                        <i class="fas fa-mobile-alt"></i>
+                        Développement Mobile
                     </h3>
                     <div class="skills-table">
                         <div class="skill-row header">
@@ -430,11 +536,11 @@
                         <div class="skill-row">
                             <div class="skill-name">
                                 <strong>Développement iOS</strong>
-                                <small>Applications natives iPhone</small>
+                                <small>Applications natives iPhone/iPad</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 80%"></div>
+                                    <div class="progress" style="width: 82%"></div>
                                 </div>
                                 <span>Avancé</span>
                             </div>
@@ -443,69 +549,136 @@
                                 <span class="tool">Swift</span>
                                 <span class="tool">Xcode</span>
                                 <span class="tool">iOS SDK</span>
-                                <span class="tool">Apple Connect</span>
+                                <span class="tool">MVVM</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
-                                <strong>Développement Web</strong>
-                                <small>Sites web et applications</small>
+                                <strong>Développement Android</strong>
+                                <small>Applications natives Android</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 85%"></div>
+                                    <div class="progress" style="width: 48%"></div>
+                                </div>
+                                <span>Débutant+</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Kotlin</span>
+                                <span class="tool">Java</span>
+                                <span class="tool">Android Studio</span>
+                                <span class="tool">Jetpack Compose</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Backend Mobile</strong>
+                                <small>Services et APIs</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 74%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Firebase</span>
+                                <span class="tool">Supabase</span>
+                                <span class="tool">REST API</span>
+                                <span class="tool">OAuth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Développement Web & Backend -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Développement Web & Backend
+                    </h3>
+                    <div class="skills-table">
+                        <div class="skill-row header">
+                            <div class="skill-name">Compétence</div>
+                            <div class="skill-level">Niveau actuel</div>
+                            <div class="skill-tools">Langages/Frameworks</div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Frontend Web</strong>
+                                <small>Interfaces utilisateur modernes</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 86%"></div>
                                 </div>
                                 <span>Avancé</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">HTML5/CSS3</span>
                                 <span class="tool">JavaScript</span>
-                                <span class="tool">PHP</span>
+                                <span class="tool">Responsive Design</span>
+                                <span class="tool">UX/UI</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Backend Python</strong>
+                                <small>Frameworks et APIs</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 78%"></div>
+                                </div>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-tools">
                                 <span class="tool">Django</span>
-                                <span class="tool">PostgreSQL</span>
-                            </div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-name">
-                                <strong>Développement Android</strong>
-                                <small>Applications mobiles Android</small>
-                            </div>
-                            <div class="skill-level">
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 50%"></div>
-                                </div>
-                                <span>En apprentissage</span>
-                            </div>
-                            <div class="skill-tools">
-                                <span class="tool">Kotlin</span>
-                                <span class="tool">Java</span>
-                                <span class="tool">Android Studio</span>
-                                <span class="tool">Flutter (bases)</span>
-                                <span class="tool">Firebase</span>
-                            </div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-name">
-                                <strong>Scripts d'automatisation</strong>
-                                <small>Tâches répétitives et outils</small>
-                            </div>
-                            <div class="skill-level">
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 75%"></div>
-                                </div>
-                                <span>Débutant</span>
-                            </div>
-                            <div class="skill-tools">
                                 <span class="tool">Python</span>
-                                <span class="tool">Bash</span>
-                                <span class="tool">PowerShell</span>
-                                <span class="tool">Ansible</span>
+                                <span class="tool">REST Framework</span>
+                                <span class="tool">Flask</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
                                 <strong>Bases de données</strong>
-                                <small>Gestion et sécurisation</small>
+                                <small>SQL et NoSQL</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 76%"></div>
+                                </div>
+                                <span>Avancé</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">PostgreSQL</span>
+                                <span class="tool">MySQL</span>
+                                <span class="tool">SQLite</span>
+                                <span class="tool">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Scripts & automatisation</strong>
+                                <small>Tâches et outils</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 72%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Python</span>
+                                <span class="tool">Bash</span>
+                                <span class="tool">PowerShell</span>
+                                <span class="tool">Git</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Hébergement & déploiement</strong>
+                                <small>Production et infrastructure</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
@@ -514,11 +687,10 @@
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
-                                <span class="tool">MySQL</span>
-                                <span class="tool">PostgreSQL</span>
-                                <span class="tool">SQLite</span>
-                                <span class="tool">MongoDB</span>
-                                <span class="tool">Requêtes SQL</span> 
+                                <span class="tool">VPS</span>
+                                <span class="tool">Nginx</span>
+                                <span class="tool">Docker</span>
+                                <span class="tool">Linux Server</span>
                             </div>
                         </div>
                     </div>
@@ -528,7 +700,7 @@
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-network-wired"></i>
-                        Réseaux & Télécommunications - Formation BUT
+                        Réseaux & Télécommunications
                     </h3>
                     <div class="skills-table">
                         <div class="skill-row header">
@@ -543,15 +715,15 @@
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 80%"></div>
+                                    <div class="progress" style="width: 78%"></div>
                                 </div>
-                                <span>Intermédiaire</span>
+                                <span>Avancé</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">Cisco</span>
-                                <span class="tool">Stormshield</span>
-                                <span class="tool">Linux</span>
-                                <span class="tool">Windows Server 2016</span>
+                                <span class="tool">VLAN</span>
+                                <span class="tool">Routage</span>
+                                <span class="tool">Commutation</span>
                             </div>
                         </div>
                         <div class="skill-row">
@@ -561,48 +733,51 @@
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 75%"></div>
+                                    <div class="progress" style="width: 74%"></div>
                                 </div>
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
+                                <span class="tool">Stormshield</span>
                                 <span class="tool">Firewalls</span>
-                                <span class="tool">VPN (Wireguard)</span>
+                                <span class="tool">VPN</span>
                                 <span class="tool">ACL</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
-                                <strong>Monitoring réseau</strong>
-                                <small>Surveillance et métriques</small>
+                                <strong>Protocoles & services</strong>
+                                <small>TCP/IP, routage dynamique</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 70%"></div>
+                                    <div class="progress" style="width: 82%"></div>
                                 </div>
-                                <span>Intermédiaire</span>
-                            </div>
-                            <div class="skill-tools">
-                                <span class="tool">Nagios</span>
-                                <span class="tool">Grafana</span>
-                            </div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-name">
-                                <strong>Protocoles réseau</strong>
-                                <small>TCP/IP, routage, commutation</small>
-                            </div>
-                            <div class="skill-level">
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 85%"></div>
-                                </div>
-                                <span>Intermédiaire</span>
+                                <span>Avancé</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">OSPF</span>
                                 <span class="tool">Frame-relay</span>
-                                <span class="tool">VLAN</span>
-                                <span class="tool">DNS</span>
+                                <span class="tool">DNS/DHCP</span>
+                                <span class="tool">BGP</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Monitoring & supervision</strong>
+                                <small>Surveillance réseau</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 68%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Zabbix</span>
+                                <span class="tool">Grafana</span>
+                                <span class="tool">SNMP</span>
+                                <span class="tool">Nagios</span>
                             </div>
                         </div>
                     </div>
@@ -612,7 +787,7 @@
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-server"></i>
-                        Systèmes & infrastructures
+                        Systèmes & Virtualisation
                     </h3>
                     <div class="skills-table">
                         <div class="skill-row header">
@@ -632,46 +807,64 @@
                                 <span>Avancé</span>
                             </div>
                             <div class="skill-tools">
-                                <span class="tool">Ubuntu</span>
-                                <span class="tool">CentOS</span>
+                                <span class="tool">Ubuntu Server</span>
                                 <span class="tool">Debian</span>
+                                <span class="tool">CentOS</span>
                                 <span class="tool">Kali Linux</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
-                                <strong>Virtualisation</strong>
-                                <small>Lab et environnements</small>
+                                <strong>Administration Windows</strong>
+                                <small>Serveurs et Active Directory</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 70%"></div>
+                                    <div class="progress" style="width: 64%"></div>
                                 </div>
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
-                                <span class="tool">VMware</span>
-                                <span class="tool">VirtualBox</span>
-                                <span class="tool">Docker</span>
-                                <span class="tool">Proxmox</span>
+                                <span class="tool">Windows Server 2016</span>
+                                <span class="tool">Windows Server 2022</span>
+                                <span class="tool">Active Directory</span>
+                                <span class="tool">PowerShell</span>
                             </div>
                         </div>
                         <div class="skill-row">
                             <div class="skill-name">
-                                <strong>Services réseau</strong>
+                                <strong>Virtualisation</strong>
+                                <small>Hyperviseurs et conteneurs</small>
+                            </div>
+                            <div class="skill-level">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 72%"></div>
+                                </div>
+                                <span>Intermédiaire</span>
+                            </div>
+                            <div class="skill-tools">
+                                <span class="tool">Proxmox</span>
+                                <span class="tool">VMware ESXi</span>
+                                <span class="tool">VirtualBox</span>
+                                <span class="tool">Docker</span>
+                            </div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="skill-name">
+                                <strong>Services d'infrastructure</strong>
                                 <small>DNS, DHCP, Web, Mail</small>
                             </div>
                             <div class="skill-level">
                                 <div class="progress-bar">
-                                    <div class="progress" style="width: 75%"></div>
+                                    <div class="progress" style="width: 74%"></div>
                                 </div>
                                 <span>Intermédiaire</span>
                             </div>
                             <div class="skill-tools">
                                 <span class="tool">BIND</span>
                                 <span class="tool">Nginx</span>
+                                <span class="tool">Apache</span>
                                 <span class="tool">Postfix</span>
-                                <span class="tool">SFTP</span>
                             </div>
                         </div>
                     </div>
@@ -699,20 +892,40 @@
                         <h3>EducMe</h3>
                         <span class="project-status">🚀 En développement</span>
                         <p>
-                            Application éducative en SwiftUI destinée aux adolescents et étudiants pour 
-                            comprendre le fonctionnement de la politique et des institutions françaises. 
-                            Extension Android prévue.
+                            <strong>Application éducative innovante</strong> développée en SwiftUI, destinée aux 
+                            adolescents et jeunes adultes pour découvrir et comprendre le fonctionnement de la 
+                            politique et des institutions françaises de manière ludique, interactive et accessible.
                         </p>
                         <p>
-                            Je ne dirai pas qu'il faut forcer les adolescents à s'intéresser à la politique mais... bon d'accord, je le dis : forcez vos adolescents à s'intéresser à la politique !
-                            EducMe le fait très bien 👀
+                            EducMe incite les adolescents à s'intéresser à la politique en transformant l'apprentissage 
+                            civique en une <strong>expérience engageante et gamifiée</strong>. L'application propose des 
+                            quiz dynamiques pour tester ses connaissances, des fiches explicatives détaillées sur les 
+                            institutions (Assemblée nationale, Sénat, système électoral français), et un système de 
+                            progression personnalisé pour suivre son évolution.
+                        </p>
+                        <p>
+                            <strong>Architecture technique :</strong> Développée selon le pattern <strong>MVVM</strong> 
+                            en SwiftUI, l'application intègre un backend initialement hébergé sur Firebase, actuellement 
+                            en <strong>migration vers Supabase sur VPS personnel</strong> pour une maîtrise complète de 
+                            l'infrastructure. Les données pédagogiques (quiz, fiches) sont stockées en JSON et 
+                            synchronisées automatiquement avec les appareils des utilisateurs.
+                        </p>
+                        <p>
+                            <strong>Expansion multiplateforme :</strong> Développement en cours de la version 
+                            <strong>Android en Kotlin</strong>, exploitant les possibilités récentes de partage de code 
+                            Swift/Kotlin pour mutualiser la logique backend et optimiser le développement cross-platform. 
+                            Un projet technique ambitieux qui forge mes compétences en développement mobile moderne.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">SwiftUI</span>
+                            <span class="tech-tag">MVVM</span>
                             <span class="tech-tag">iOS</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">VPS</span>
                             <span class="tech-tag">UX/UI</span>
                             <span class="tech-tag">Pédagogie</span>
-                            <span class="tech-tag">Flutter</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/Potaaaaaaaaaaaato/EducMe_iOS_private" class="project-link">
@@ -734,27 +947,48 @@
                     </div>
                     <div class="project-content">
                         <h3>Site Web association APESF</h3>
-                        <span class="project-status">💼 Stage actuel</span>
+                        <span class="project-status">✅ Projet terminé</span>
                         <p>
-                            Développement du nouveau site web pour l'Association Pour l'Enfant et Sa Famille 
-                            à Saint-Étienne. Modernisation complète de la présence web de l'association.
+                            <strong>Refonte complète du site web</strong> de l'Association Pour l'Enfant et Sa Famille, 
+                            basée à Saint-Étienne, dans le cadre de mon stage de 2ème année BUT RT. Mission de 
+                            modernisation de leur présence web pour offrir une plateforme moderne, fonctionnelle et 
+                            facilement administrable.
                         </p>
                         <p>
-                            Ce projet alliait code Python, HTML/CSS/JS, requêtes SQL, affichage dynamique et gestion des comptes utilisateurs.
-                            Allez savoir, si ça se trouve c'est ce stage qui m'a poussé à  créer ce site 🤷🏼‍♂️
+                            <strong>Architecture technique :</strong> Mise en place d'une stack complète avec 
+                            <strong>Django pour le backend</strong>, intégré à une base de données <strong>PostgreSQL</strong> 
+                            garantissant performance, évolutivité et sécurité. Le frontend combine HTML5, CSS3 et 
+                            JavaScript pour une interface responsive et moderne, adaptée à tous les supports (desktop, 
+                            tablette, mobile).
+                        </p>
+                        <p>
+                            <strong>Interface d'administration :</strong> Développement d'un système complet de 
+                            <strong>gestion des contenus user-friendly</strong> permettant aux employés de l'association 
+                            de modifier textes, images et actualités en toute autonomie, sans compétences techniques. 
+                            Système d'authentification sécurisé avec gestion des rôles et permissions.
+                        </p>
+                        <p>
+                            <strong>Hébergement et déploiement :</strong> Configuration et mise en production sur un 
+                            <strong>VPS OVH 🐓</strong>, assurant une infrastructure 100% française pour la souveraineté 
+                            des données. Ce projet allie développement full-stack, gestion de base de données, design 
+                            UX/UI et administration système. Une expérience professionnelle enrichissante qui a sans doute 
+                            inspiré la création de ce portfolio ! 🤷🏼‍♂️
                         </p>
                         <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">HTML5/CSS3</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Responsive</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">VPS OVH</span>
+                            <span class="tech-tag">Authentification</span>
+                            <span class="tech-tag">CMS</span>
+                            <span class="tech-tag">Responsive Design</span>
                         </div>
                         <div class="project-links">
                             <a href="https://www.pourlenfantetsafamille.fr" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
-                                Site web
+                                Voir le site web
                             </a>
                         </div>
                     </div>
@@ -762,31 +996,41 @@
 
                 <div class="project-card featured">
                     <div class="project-image">
-                        <i class="fa-solid fa-train"></i>
+                        <i class="fas fa-network-wired"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Réservation automatique de billets SNCF Max Jeune</h3>
+                        <h3>Mallette de démonstration BUT RT</h3>
                         <span class="project-status">🚀 En développement</span>
                         <p>
-                            Application mobile cross-platform développée en Flutter permettant la réservation automatique de billets Max Jeune SNCF selon les critères personnalisés de l'utilisateur.
+                            Conception et réalisation d'un <strong>équipement mobile et modulaire</strong> permettant 
+                            de présenter le BUT Réseaux et Télécommunications lors d'événements variés : salons 
+                            étudiants, conventions geek, fête de la science, journées portes ouvertes, et autres 
+                            manifestations de promotion de la formation.
                         </p>
                         <p>
-                            L'application interagit avec les API publiques SNCF pour l'authentification, la validation des réservations et la signature des billets.
+                            Ce dispositif démonstratif, <strong>interactif et pédagogique</strong>, met en valeur 
+                            les <strong>5 compétences clés</strong> du référentiel BUT RT à travers des activités 
+                            pratiques et des démonstrations techniques adaptées à différents publics : lycéens en 
+                            orientation, grand public curieux des métiers du numérique, et professionnels du secteur.
                         </p>
                         <p>
-                            Un bon projet qui occupe bien mes trajets quasiment hebdomadaires entre Roanne et Paris ✨
+                            <strong>Aspect technique :</strong> Le projet inclut l'évaluation comparative d'une 
+                            migration de la solution de virtualisation <strong>ESXi vers Proxmox</strong>, ainsi que 
+                            le développement d'interfaces utilisateur intuitives permettant de présenter les aspects 
+                            techniques de la formation de manière accessible et engageante, même pour un public non-initié.
+                        </p>
+                        <p>
+                            Un projet alliant conception matérielle, virtualisation, pédagogie et communication, 
+                            visant à rendre attractive et compréhensible une formation technique exigeante.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">HHTP</span>
-                            <span class="tech-tag">sha256</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://data.sncf.com/explore/dataset/tgvmax/information/" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Jeux de données publiques SNCF
-                            </a>
+                            <span class="tech-tag">Proxmox</span>
+                            <span class="tech-tag">ESXi</span>
+                            <span class="tech-tag">Virtualisation</span>
+                            <span class="tech-tag">Réseaux</span>
+                            <span class="tech-tag">Pédagogie</span>
+                            <span class="tech-tag">UX/UI</span>
+                            <span class="tech-tag">Démonstration interactive</span>
                         </div>
                     </div>
                 </div>
@@ -813,30 +1057,40 @@
                             <i class="fab fa-github"></i>
                             <span>GitHub - Projets & Code</span>
                         </a>
+                        <a href="assets/cv/CV_Tristan_Devaux.pdf" class="contact-method" download>
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Télécharger mon CV (PDF)</span>
+                        </a>
                         <div class="contact-method">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Roanne & Paris</span>
                         </div>
                         <div class="contact-method">
                             <i class="fas fa-briefcase"></i>
-                            <span>En stage à Saint-Étienne</span>
+                            <span>En recherche de stage sur Paris</span>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" action="https://forms.brevo.com/f/[VOTRE_FORM_ID]" method="POST">
+                <form class="contact-form" id="contact-form">
+                    <!-- Message de feedback -->
+                    <div class="form-message" id="form-message">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="message-text"></span>
+                    </div>
+                    
                     <div class="form-group">
-                        <input type="text" name="nom" placeholder="Votre nom *" required>
+                        <input type="text" name="nom" id="contact-nom" placeholder="Votre nom *" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Votre email *" required>
+                        <input type="email" name="email" id="contact-email" placeholder="Votre email *" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="sujet" placeholder="Sujet du message">
+                        <input type="text" name="sujet" id="contact-sujet" placeholder="Sujet du message">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Votre message *" rows="5" required></textarea>
+                        <textarea name="message" id="contact-message" placeholder="Votre message *" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" id="submit-btn">
                         <i class="fas fa-paper-plane"></i>
                         Envoyer le message
                     </button>
@@ -851,23 +1105,11 @@
             <div class="footer-content">
                 <div class="footer-main">
                     <p>
-                        <strong>Tristan Devaux</strong> • Tous droits réservés • &copy; 2025
+                        <strong>Tristan Devaux</strong> • &copy; 2025
                     </p>
                     <p>
-                        Fait avec ❤️, beaucoup de café et beaucoup de Taylor Swift dans les oreilles. •
-                        Développé et hébergé en 🇫🇷 • 
-                        Dernière mise à jour : 21 Juillet 2025
+                        Fait avec ❤️, en 🇫🇷 • Dernière mise à jour : 07 novembre 2025
                     </p>
-                    <p>
-                        U2kgdHUgYXJyaXZlcyDDoCBkw6ljaGlmZnJlciBjZSBtZXNzYWdlLCB0dSBjb21wcmVuZHJhcyBzYW5zIGRvdXRlIMOgIHF1b2kgc2VydmVudCBsZXMgYWRyZXNzZXMganVzdGUgZW4gZGVzc291cy4=
-                    </p>
-                    <p>
-                        DJ59x2NuFeBUjqtWMrHDokF6EqnhRerfYB
-                    </p>
-                    <p>
-                        bc1q9jckqv0rhsp89q8fa0lduzhwlkfuhymjp6f9m6
-                    </p>
-                </div>
             </div>
         </div>
     </footer>
