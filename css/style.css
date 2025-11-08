@@ -434,7 +434,40 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
-/* Terminal Visual */
+/* Random Image Hero */
+.random-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.hero-random-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    animation: fadeInImage 0.5s ease-in;
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Terminal Visual (CODE COMMENTÉ - Remplacé par images aléatoires) */
 .terminal-window {
     background: var(--terminal-bg);
     border-radius: 8px;

@@ -643,6 +643,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser le formulaire de contact Brevo
     initContactForm();
     
+    // Initialiser l'image aléatoire du hero
+    initRandomHeroImage();
+    
     console.log('Portfolio JavaScript chargé avec succès ! 🚀');
 });
 
@@ -656,7 +659,7 @@ function initContactForm() {
     const submitBtn = document.getElementById('submit-btn');
     
     // ⚠️ IMPORTANT : Remplacez cette clé par votre clé API Brevo réelle
-    const BREVO_API_KEY = 'CLE_API_BREVO';
+    const BREVO_API_KEY = 'xsmtpsib-d3140ead551c3afae9225c8dcad5d3eb7c5fb69c8ea00eb60265f3d4f8f691c2-KmEF0YWdyyA5pVXv';
     const SENDER_EMAIL = 'bonjour@tristan-devaux.fr';
     const RECIPIENT_EMAIL = 'tristan@tristan-devaux.fr';
     
@@ -841,4 +844,56 @@ function initContactForm() {
         };
         return text.replace(/[&<>"']/g, m => map[m]);
     }
+}
+
+// ==========================================
+// Image aléatoire dans le Hero
+// ==========================================
+function initRandomHeroImage() {
+    const imageElement = document.getElementById('random-hero-image');
+    
+    if (!imageElement) {
+        console.warn('⚠️ Élément image hero non trouvé');
+        return;
+    }
+    
+    // Liste des 17 images disponibles dans le dossier assets/hero-images/
+    const heroImages = [
+        'assets/hero-images/image1.jpg',
+        'assets/hero-images/image2.jpg',
+        'assets/hero-images/image3.jpg',
+        'assets/hero-images/image4.jpg',
+        'assets/hero-images/image5.jpg',
+        'assets/hero-images/image6.jpg',
+        'assets/hero-images/image7.jpg',
+        'assets/hero-images/image8.jpg',
+        'assets/hero-images/image9.jpg',
+        'assets/hero-images/image10.jpg',
+        'assets/hero-images/image11.jpg',
+        'assets/hero-images/image12.jpg',
+        'assets/hero-images/image13.jpg',
+        'assets/hero-images/image14.jpg',
+        'assets/hero-images/image15.jpg',
+        'assets/hero-images/image16.jpg',
+        'assets/hero-images/image17.jpg'
+    ];
+    
+    // Sélectionner une image aléatoire parmi les 17 disponibles
+    const randomIndex = Math.floor(Math.random() * heroImages.length);
+    const selectedImage = heroImages[randomIndex];
+    
+    console.log('🖼️ Image hero sélectionnée:', selectedImage, `(${randomIndex + 1}/17)`);
+    
+    // Charger l'image
+    imageElement.src = selectedImage;
+    
+    // Log de succès quand l'image est chargée
+    imageElement.onload = function() {
+        console.log('✅ Image hero chargée avec succès !');
+    };
+    
+    // Log d'erreur si problème (ne devrait jamais arriver avec 17 images)
+    imageElement.onerror = function() {
+        console.error('❌ Erreur de chargement de l\'image:', selectedImage);
+    };
 }
