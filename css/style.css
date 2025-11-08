@@ -1051,9 +1051,9 @@ body {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-info h3 {
@@ -1072,6 +1072,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+}
+
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--spacing-xl) * 4);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
 }
 
 .contact-method {
@@ -1215,23 +1229,23 @@ body {
 ========================================== */
 @media (max-width: 768px) {
     .nav-container {
-        flex-wrap: wrap;
+        padding: 0 var(--spacing-sm);
     }
     
     .nav-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--bg-primary);
+        position: fixed;
+        top: 70px;
+        left: -100%;
         flex-direction: column;
-        padding: var(--spacing-md);
-        border-top: 1px solid var(--border-color);
+        background: var(--bg-primary);
+        width: 100%;
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-lg);
+        transition: left var(--transition-normal);
     }
     
     .nav-menu.active {
-        display: flex;
+        left: 0;
     }
     
     .hamburger {
@@ -1239,14 +1253,15 @@ body {
     }
     
     .theme-switcher {
-        order: -1;
-        margin-left: 0;
-        margin-right: auto;
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%);
     }
     
     .hero-container {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: var(--spacing-lg);
     }
     
     .about-content {
@@ -1254,11 +1269,16 @@ body {
     }
     
     .about-stats {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
     
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-methods-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
     
     .skill-row {
