@@ -3,33 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tristan Devaux - Portfolio Cybersécurité BUT RT</title>
+    <title>Tristan Devaux - Portfolio</title>
     <meta name="description" content="Portfolio de Tristan Devaux, étudiant en BUT Réseaux et Télécommunications spécialisé en cybersécurité">
     <meta name="keywords" content="Tristan Devaux, BUT RT, cybersécurité, réseaux, télécommunications, portfolio">
     <meta name="author" content="Tristan Devaux">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tristan Devaux - Portfolio Cybersécurité">
+    <meta property="og:title" content="Tristan Devaux - Portfolio">
     <meta property="og:description" content="Étudiant BUT RT spécialisé en cybersécurité - 21 ans - Roanne">
     <meta property="og:type" content="website">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Navigation avec le switch corrigé -->
 <nav class="navbar" id="navbar">
     <div class="nav-container">
         <div class="nav-logo">
@@ -38,13 +27,12 @@
         <ul class="nav-menu" id="nav-menu">
             <li><a href="#home" class="nav-link">Accueil</a></li>
             <li><a href="#about" class="nav-link">À propos</a></li>
-            <li><a href="#experience" class="nav-link">Expérience</a></li>
+            <li><a href="#experience" class="nav-link">Expériences</a></li>
             <li><a href="#skills" class="nav-link">Compétences</a></li>
             <li><a href="#projects" class="nav-link">Projets</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         
-        <!-- Theme Switcher - IMPORTANT: Vérifiez que cet ID existe -->
         <div class="theme-switcher">
             <button id="theme-toggle" class="theme-toggle-btn" aria-label="Changer de thème">
                 <i class="fas fa-sun" id="sun-icon"></i>
@@ -59,8 +47,6 @@
         </div>
     </div>
 </nav>
-
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -69,7 +55,7 @@
                     <br>
                 </h1>
                 <p class="hero-subtitle">
-                    Étudiant en 2ème année BUT Réseaux et Télécommunications - IUT de Roanne
+                    Étudiant en 3ème année BUT Réseaux et Télécommunications - IUT de Roanne
                     <br>
                 </p>
                 <div class="hero-buttons">
@@ -99,12 +85,10 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <!-- Image aléatoire -->
                 <div class="random-image-container">
                     <img id="random-hero-image" src="" alt="Image hero" class="hero-random-image">
                 </div>
                 
-                <!-- Terminal (CODE COMMENTÉ - Remplacé par images aléatoires) -->
                 <!--
                 <div class="terminal-window">
                     <div class="terminal-header">
@@ -154,7 +138,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">À propos de moi</h2>
@@ -184,20 +167,6 @@
                         éducative en SwiftUI ou la refonte de sites web avec Django, reflètent ma capacité à mener 
                         des projets techniques complexes de manière autonome et professionnelle.
                     </p>
-                    
-                    <!-- Activité GitHub -->
-                    <div class="github-activity-container">
-                        <h3 class="github-title">
-                            <i class="fab fa-github"></i>
-                            Activité GitHub récente
-                        </h3>
-                        <div id="github-activity">
-                            <div class="github-loading">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                Chargement de l'activité...
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -221,7 +190,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Expériences professionnelles (et personnelles)</h2>
@@ -320,7 +288,6 @@
                             métier tout en optimisant le développement.
                         </p>
                         
-                        <!-- Carousel de screenshots -->
                         <div class="app-carousel">
                             <div class="app-carousel-container">
                                 <img src="assets/screenshots/educme-home.png" alt="EducMe - Écran d'accueil" class="app-screenshot active">
@@ -414,7 +381,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Mes compétences</h2>
@@ -423,8 +389,6 @@
                 <p>Je développe également les compétences que j'ai pu acquérir lors de mes différents projets personnels (et la plupart du temps sans rapport direct avec ma formation)</p>
             </div>
             <div class="skills-container">
-                
-                <!-- Cybersécurité -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-shield-alt"></i>
@@ -529,7 +493,6 @@
                     </div>
                 </div>
 
-                <!-- Développement Mobile -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-mobile-alt"></i>
@@ -599,7 +562,6 @@
                     </div>
                 </div>
 
-                <!-- Développement Web & Backend -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-code"></i>
@@ -704,7 +666,6 @@
                     </div>
                 </div>
 
-                <!-- Réseaux -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-network-wired"></i>
@@ -791,7 +752,6 @@
                     </div>
                 </div>
 
-                <!-- Systèmes -->
                 <div class="skill-category">
                     <h3 class="category-title">
                         <i class="fas fa-server"></i>
@@ -881,7 +841,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Mes projets</h2>
@@ -890,8 +849,7 @@
                 reflétant ma passion pour le développement.
             </p>
             <div class="projects-grid">
-                
-                <!-- Projet Politique App -->
+
                 <div class="project-card featured">
                     <div class="project-image">
                         <i class="fas fa-mobile-alt"></i>
@@ -948,7 +906,6 @@
                     </div>
                 </div>
 
-                <!-- Projet Site Association -->
                 <div class="project-card featured">
                     <div class="project-image">
                         <i class="fas fa-globe"></i>
@@ -1046,14 +1003,12 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contactez-moi</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-methods-grid">
-                        <!-- Colonne 1 -->
                         <div class="contact-column">
                             <a href="mailto:tristan@tristan-devaux.fr" class="contact-method">
                                 <i class="fas fa-envelope"></i>
@@ -1068,8 +1023,7 @@
                                 <span>GitHub - Projets & Code</span>
                             </a>
                         </div>
-                        
-                        <!-- Colonne 2 -->
+
                         <div class="contact-column">
                             <a href="assets/cv/CV_Tristan_Devaux.pdf" class="contact-method" download>
                                 <i class="fas fa-file-pdf"></i>
@@ -1090,7 +1044,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1105,7 +1058,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>

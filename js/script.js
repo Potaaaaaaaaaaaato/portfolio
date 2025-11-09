@@ -1,32 +1,24 @@
-// ==========================================
-// Portfolio JavaScript - Tristan Devaux
-// ==========================================
+/* 
+    Pas un jour ne passe sans que je me demande comment ce code fonctionne tourne sans erreur...
+*/
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==========================================
-    // Theme Switcher avec thème automatique selon l'heure
-    // ==========================================
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
     
-    // Fonction pour déterminer le thème selon l'heure
     function getAutoTheme() {
         const hour = new Date().getHours();
-        // Mode sombre entre 20h et 7h
         return (hour >= 20 || hour < 7) ? 'dark' : 'light';
     }
     
     if (themeToggle) {
-        // Vérifier si l'utilisateur a une préférence manuelle
         const manualTheme = localStorage.getItem('theme-manual');
         const savedTheme = localStorage.getItem('theme');
         
         if (manualTheme === 'true' && savedTheme) {
-            // L'utilisateur a choisi manuellement, respecter son choix
             html.setAttribute('data-theme', savedTheme);
         } else {
-            // Appliquer le thème automatique
             const autoTheme = getAutoTheme();
             html.setAttribute('data-theme', autoTheme);
             localStorage.setItem('theme', autoTheme);
@@ -37,13 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            localStorage.setItem('theme-manual', 'true'); // Marquer comme choix manuel
-            
-            // Afficher un petit message
+            localStorage.setItem('theme-manual', 'true');
             showThemeToast(`Thème ${newTheme === 'dark' ? 'sombre' : 'clair'} activé`);
         });
         
-        // Vérifier toutes les heures si on doit changer le thème auto
         setInterval(() => {
             if (localStorage.getItem('theme-manual') !== 'true') {
                 const autoTheme = getAutoTheme();
@@ -53,10 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('theme', autoTheme);
                 }
             }
-        }, 60000); // Vérifier toutes les minutes
+        }, 60000);
     }
     
-    // Toast pour les changements de thème
     function showThemeToast(message) {
         const toast = document.createElement('div');
         toast.className = 'theme-toast';
@@ -92,9 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
     
-    // ==========================================
-    // Image Carousel avec vos mèmes (CODE COMMENTÉ - HTML manquant)
-    // ==========================================
     /*
     let currentImageIndex = 0;
     let carouselInterval;
@@ -289,9 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     */
     
-    // ==========================================
-    // Navigation et autres fonctionnalités (code existant)
-    // ==========================================
     const navbar = document.getElementById('navbar');
     
     if (navbar) {
@@ -304,7 +286,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navigation active link
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
     
@@ -328,7 +309,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile navigation
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     
@@ -346,7 +326,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Smooth scrolling
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -362,7 +341,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -372,116 +350,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Initialiser le carrousel de mèmes (commenté - HTML manquant)
-    // initializeCarousel();
-    
-    // ==========================================
-    // GitHub Activity Integration
-    // ==========================================
-    async function loadGitHubActivity() {
-        const githubContainer = document.getElementById('github-activity');
-        if (!githubContainer) return;
-        
-        try {
-            const username = 'Potaaaaaaaaaaaato'; // Ton username GitHub
-            const response = await fetch(`https://api.github.com/users/${username}/events/public?per_page=5`);
-            const events = await response.json();
-            
-            if (events.length === 0) {
-                githubContainer.innerHTML = '<p>Aucune activité récente</p>';
-                return;
-            }
-            
-            let html = '<div class="github-events">';
-            
-            events.slice(0, 5).forEach(event => {
-                const date = new Date(event.created_at);
-                const timeAgo = getTimeAgo(date);
-                let eventText = '';
-                let icon = 'fa-code';
-                
-                switch(event.type) {
-                    case 'PushEvent':
-                        const commits = event.payload.commits?.length || 0;
-                        eventText = `Pushed ${commits} commit${commits > 1 ? 's' : ''} to ${event.repo.name}`;
-                        icon = 'fa-code-branch';
-                        break;
-                    case 'CreateEvent':
-                        eventText = `Created ${event.payload.ref_type} in ${event.repo.name}`;
-                        icon = 'fa-plus-circle';
-                        break;
-                    case 'IssuesEvent':
-                        eventText = `${event.payload.action} issue in ${event.repo.name}`;
-                        icon = 'fa-exclamation-circle';
-                        break;
-                    case 'PullRequestEvent':
-                        eventText = `${event.payload.action} pull request in ${event.repo.name}`;
-                        icon = 'fa-code-pull-request';
-                        break;
-                    case 'WatchEvent':
-                        eventText = `Starred ${event.repo.name}`;
-                        icon = 'fa-star';
-                        break;
-                    case 'ForkEvent':
-                        eventText = `Forked ${event.repo.name}`;
-                        icon = 'fa-code-fork';
-                        break;
-                    default:
-                        eventText = `Activity in ${event.repo.name}`;
-                }
-                
-                html += `
-                    <div class="github-event">
-                        <div class="github-event-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="github-event-content">
-                            <p class="github-event-text">${eventText}</p>
-                            <span class="github-event-time">${timeAgo}</span>
-                        </div>
-                    </div>
-                `;
-            });
-            
-            html += '</div>';
-            html += `<a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> Voir tout sur GitHub
-            </a>`;
-            
-            githubContainer.innerHTML = html;
-            
-        } catch (error) {
-            console.error('Erreur lors du chargement de l\'activité GitHub:', error);
-            githubContainer.innerHTML = `
-                <p style="color: var(--text-muted); font-size: 14px;">
-                    <i class="fab fa-github"></i> 
-                    <a href="https://github.com/Potaaaaaaaaaaaato" target="_blank" style="color: var(--primary-color);">
-                        Voir mon activité sur GitHub
-                    </a>
-                </p>
-            `;
-        }
-    }
-    
-    function getTimeAgo(date) {
-        const seconds = Math.floor((new Date() - date) / 1000);
-        let interval = seconds / 31536000;
-        
-        if (interval > 1) return Math.floor(interval) + " ans";
-        interval = seconds / 2592000;
-        if (interval > 1) return Math.floor(interval) + " mois";
-        interval = seconds / 86400;
-        if (interval > 1) return Math.floor(interval) + " jours";
-        interval = seconds / 3600;
-        if (interval > 1) return Math.floor(interval) + " heures";
-        interval = seconds / 60;
-        if (interval > 1) return Math.floor(interval) + " minutes";
-        return Math.floor(seconds) + " secondes";
-    }
-    
-    // ==========================================
-    // App Screenshots Carousel
-    // ==========================================
     function initAppCarousel() {
         const appCarousels = document.querySelectorAll('.app-carousel');
         
@@ -495,7 +363,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (images.length === 0) return;
             
-            // Vérifier si les images existent
             images.forEach((img, index) => {
                 img.addEventListener('load', () => {
                     loadedImages++;
@@ -503,7 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 img.addEventListener('error', () => {
                     console.log('Image non trouvée:', img.src);
-                    // Masquer l'image qui ne charge pas
                     img.style.display = 'none';
                     
                     // Si aucune image ne charge, afficher un message
@@ -518,7 +384,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
             
-            // Créer les dots
             if (dotsContainer) {
                 images.forEach((_, index) => {
                     const dot = document.createElement('button');
@@ -558,7 +423,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (prevBtn) prevBtn.addEventListener('click', prevSlide);
             if (nextBtn) nextBtn.addEventListener('click', nextSlide);
             
-            // Auto-play (optionnel)
             let autoplayInterval = setInterval(nextSlide, 4000);
             carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
             carousel.addEventListener('mouseleave', () => {
@@ -567,11 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ==========================================
-    // Bouton Retour en Haut
-    // ==========================================
     function initScrollToTop() {
-        // Créer le bouton
         const scrollBtn = document.createElement('button');
         scrollBtn.id = 'scroll-to-top';
         scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -600,7 +460,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.body.appendChild(scrollBtn);
         
-        // Afficher/masquer selon le scroll
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 scrollBtn.style.opacity = '1';
@@ -611,7 +470,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Effet hover
         scrollBtn.addEventListener('mouseenter', () => {
             scrollBtn.style.transform = 'translateY(-5px) scale(1.1)';
             scrollBtn.style.boxShadow = 'var(--shadow-glow)';
@@ -622,7 +480,6 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollBtn.style.boxShadow = 'var(--shadow-lg)';
         });
         
-        // Scroll au clic
         scrollBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -631,24 +488,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Charger l'activité GitHub
-    loadGitHubActivity();
-    
-    // Initialiser le carousel d'apps
     initAppCarousel();
-    
-    // Initialiser le bouton scroll to top
     initScrollToTop();
-    
-    // Initialiser l'image aléatoire du hero
     initRandomHeroImage();
     
     console.log('Portfolio JavaScript chargé avec succès ! 🚀');
 });
 
-// ==========================================
-// Image aléatoire dans le Hero
-// ==========================================
 function initRandomHeroImage() {
     const imageElement = document.getElementById('random-hero-image');
     
@@ -657,7 +503,6 @@ function initRandomHeroImage() {
         return;
     }
     
-    // Liste des 17 images disponibles dans le dossier assets/hero-images/
     const heroImages = [
         'assets/hero-images/image1.jpg',
         'assets/hero-images/image2.jpg',
@@ -678,21 +523,15 @@ function initRandomHeroImage() {
         'assets/hero-images/image17.jpg'
     ];
     
-    // Sélectionner une image aléatoire parmi les 17 disponibles
     const randomIndex = Math.floor(Math.random() * heroImages.length);
     const selectedImage = heroImages[randomIndex];
     
     console.log('🖼️ Image hero sélectionnée:', selectedImage, `(${randomIndex + 1}/17)`);
     
-    // Charger l'image
     imageElement.src = selectedImage;
-    
-    // Log de succès quand l'image est chargée
     imageElement.onload = function() {
         console.log('✅ Image hero chargée avec succès !');
     };
-    
-    // Log d'erreur si problème (ne devrait jamais arriver avec 17 images)
     imageElement.onerror = function() {
         console.error('❌ Erreur de chargement de l\'image:', selectedImage);
     };

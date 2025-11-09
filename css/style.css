@@ -1,8 +1,4 @@
-/* ==========================================
-   Variables CSS pour les thèmes
-========================================== */
 :root {
-    /* Thème clair (par défaut) */
     --primary-color: #FF8CC8;
     --secondary-color: #FF69B4;
     --accent-color: #FF1493;
@@ -13,14 +9,10 @@
     --text-secondary: #4a4a4a;
     --text-muted: #6c757d;
     --border-color: #e0e0e0;
-    
-    /* Couleurs pour le terminal */
     --terminal-bg: #2d3748;
     --terminal-header-bg: #4a5568;
     --terminal-text: #e2e8f0;
     --terminal-prompt: var(--primary-color);
-    
-    /* Typographie */
     --font-family: 'Inter', sans-serif;
     --font-size-base: 16px;
     --font-size-sm: 14px;
@@ -28,27 +20,20 @@
     --font-size-xl: 24px;
     --font-size-2xl: 32px;
     --font-size-3xl: 48px;
-    
-    /* Espacements */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
-    
-    /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-    
-    /* Ombres */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
     --shadow-glow: 0 0 20px rgba(255, 140, 200, 0.3);
 }
 
-/* Thème sombre */
 [data-theme="dark"] {
     --primary-color: #FF8CC8;
     --secondary-color: #FF69B4;
@@ -71,9 +56,6 @@
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* ==========================================
-   Reset et Base
-========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -94,9 +76,6 @@ body {
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-/* ==========================================
-   Utilitaires
-========================================== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -128,7 +107,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Boutons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -181,9 +159,6 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
-/* ==========================================
-   Navigation avec Theme Switcher
-========================================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -260,7 +235,6 @@ body {
     width: 100%;
 }
 
-/* Theme Switcher */
 .theme-switcher {
     display: flex;
     align-items: center;
@@ -333,9 +307,6 @@ body {
     transition: var(--transition-fast);
 }
 
-/* ==========================================
-   Hero Section
-========================================== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -344,7 +315,7 @@ body {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    padding-top: 100px; /* Espace fixe avec la navbar */
+    padding-top: 100px;
 }
 
 .hero::before {
@@ -407,7 +378,6 @@ body {
     margin-bottom: var(--spacing-lg);
 }
 
-/* Liens sociaux dans le hero */
 .hero-social {
     display: flex;
     gap: var(--spacing-md);
@@ -434,7 +404,6 @@ body {
     box-shadow: var(--shadow-glow);
 }
 
-/* Random Image Hero */
 .random-image-container {
     width: 100%;
     height: 100%;
@@ -467,7 +436,6 @@ body {
     }
 }
 
-/* Terminal Visual (CODE COMMENTÉ - Remplacé par images aléatoires) */
 .terminal-window {
     background: var(--terminal-bg);
     border-radius: 8px;
@@ -543,9 +511,6 @@ body {
     animation: blink 1s infinite;
 }
 
-/* ==========================================
-   About Section
-========================================== */
 .about {
     padding: var(--spacing-xl) 0;
     background: var(--bg-secondary);
@@ -606,9 +571,6 @@ body {
     font-size: var(--font-size-sm);
 }
 
-/* ==========================================
-   Experience Section
-========================================== */
 .experience {
     padding: var(--spacing-xl) 0;
     background: var(--bg-primary);
@@ -753,9 +715,6 @@ body {
     color: white;
 }
 
-/* ==========================================
-   Skills Section
-========================================== */
 .skills {
     padding: var(--spacing-xl) 0;
     background: var(--bg-secondary);
@@ -901,9 +860,6 @@ body {
     color: var(--primary-color);
 }
 
-/* ==========================================
-   Projects Section
-========================================== */
 .projects {
     padding: var(--spacing-xl) 0;
     background: var(--bg-primary);
@@ -1040,9 +996,6 @@ body {
     background: rgba(255, 140, 200, 0.05);
 }
 
-/* ==========================================
-   Contact Section
-========================================== */
 .contact {
     padding: var(--spacing-xl) 0;
     background: var(--bg-secondary);
@@ -1112,7 +1065,6 @@ body {
     color: var(--primary-color);
 }
 
-/* Formulaire de contact */
 .contact-form {
     background: var(--bg-primary);
     padding: var(--spacing-lg);
@@ -1120,7 +1072,6 @@ body {
     border: 1px solid var(--border-color);
 }
 
-/* Messages de feedback du formulaire */
 .form-message {
     padding: 15px 20px;
     border-radius: 8px;
@@ -1201,9 +1152,6 @@ body {
     gap: var(--spacing-xs);
 }
 
-/* ==========================================
-   Footer
-========================================== */
 .footer {
     background: var(--bg-primary);
     padding: var(--spacing-lg) 0;
@@ -1224,9 +1172,6 @@ body {
     color: var(--primary-color);
 }
 
-/* ==========================================
-   Responsive Design
-========================================== */
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 var(--spacing-sm);
@@ -1317,9 +1262,6 @@ body {
     }
 }
 
-/* ==========================================
-   Image Carousel dans Hero Section
-========================================== */
 .image-carousel {
     position: relative;
     width: 100%;
@@ -1453,7 +1395,6 @@ body {
     animation: imageSlide 0.5s ease-out;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .carousel-container {
         height: 300px;
@@ -1469,9 +1410,6 @@ body {
     }
 }
 
-/* ==========================================
-   Image Carousel pour les mèmes de dev
-========================================== */
 .image-carousel {
     position: relative;
     width: 100%;
@@ -1604,7 +1542,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Animation spéciale pour les mèmes */
 @keyframes memeSlide {
     0% {
         opacity: 0;
@@ -1620,7 +1557,6 @@ body {
     animation: memeSlide 0.6s ease-out;
 }
 
-/* Responsive pour mobile */
 @media (max-width: 768px) {
     .carousel-container {
         height: 300px;
@@ -1658,104 +1594,6 @@ body {
     }
 }
 
-/* ==========================================
-   GitHub Activity Styles
-========================================== */
-.github-activity-container {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-md);
-    background: var(--bg-primary);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
-
-.github-title {
-    font-size: var(--font-size-xl);
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.github-title i {
-    color: var(--primary-color);
-}
-
-.github-loading {
-    text-align: center;
-    padding: var(--spacing-md);
-    color: var(--text-muted);
-}
-
-.github-events {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-.github-event {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm);
-    background: var(--bg-secondary);
-    border-radius: 8px;
-    transition: var(--transition-fast);
-}
-
-.github-event:hover {
-    background: var(--bg-tertiary);
-    transform: translateX(5px);
-}
-
-.github-event-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.github-event-content {
-    flex: 1;
-}
-
-.github-event-text {
-    font-size: var(--font-size-sm);
-    color: var(--text-primary);
-    margin-bottom: 4px;
-}
-
-.github-event-time {
-    font-size: 12px;
-    color: var(--text-muted);
-}
-
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    margin-top: var(--spacing-md);
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-fast);
-}
-
-.github-link:hover {
-    color: var(--accent-color);
-    transform: translateX(5px);
-}
-
-/* ==========================================
-   App Screenshots Carousel
-========================================== */
 .app-carousel {
     position: relative;
     margin: var(--spacing-lg) 0;
@@ -1851,7 +1689,6 @@ body {
     opacity: 0.7;
 }
 
-/* Responsive pour GitHub et App Carousel */
 @media (max-width: 768px) {
     .github-activity-container {
         padding: var(--spacing-sm);
